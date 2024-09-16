@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "packages": [
+    "go@latest",
+    "python@latest",
+    "nodejs@latest",
+    "python312Packages.pip@latest",
+    "wrk@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "go": "cd go && go run main.go && cd ..",
+      "py": ". $VENV_DIR/bin/activate && fastapi run python/main.py --port 1325",
+      "js": "node node/main.js"
+    }
+  }
+}
