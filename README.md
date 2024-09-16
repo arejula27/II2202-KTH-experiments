@@ -14,6 +14,5 @@ devbox run js # for node server
 
 If you also want to run the benchmarking you can run the following command:
 ```bash
-devbox shell # to enter the devbox shell
-wrk -t12 -c400 -d30s http://127.0.0.1:<port>
+devbox run wrk <port>
 ```
