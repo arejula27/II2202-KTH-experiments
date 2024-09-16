@@ -13,7 +13,13 @@
     ],
     "scripts": {
       "go": "cd go && go run main.go && cd ..",
-      "py": ". $VENV_DIR/bin/activate && fastapi run python/main.py --port 1325",
+      "py": [
+        ". $VENV_DIR/bin/activate",
+        "if ! which fastapi > /dev/null; then",
+          "pip install \"fastapi[standard]\" ",
+        "fi",
+        "fastapi run python/main.py --port 1325"
+      ],
       "js": "node node/main.js"
     }
   }
