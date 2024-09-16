@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 	res.send('Hello, World!');
 });
 
-app.listen(1325, () => {
-	console.log('Server running on port 1323');
+app.listen(1324, () => {
+	console.log('Server running on port 1324');
 });
 
