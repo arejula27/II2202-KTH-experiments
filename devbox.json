@@ -12,11 +12,11 @@
       "echo 'Welcome to devbox!' > /dev/null"
     ],
     "scripts": {
-      "go": "cd go && go run main.go && cd ..",
+      "go": "cd go && go run main.go",
       "py": [
         ". $VENV_DIR/bin/activate",
-        "if ! which fastapi > /dev/null; then",
-          "pip install \"fastapi[standard]\" ",
+        "if ! which fastapi > /dev/null 2>&1 ; then",
+          "pip install -r python/requirements.txt",
         "fi",
         "fastapi run python/main.py --port 1325"
       ],
