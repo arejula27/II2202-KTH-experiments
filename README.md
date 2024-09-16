@@ -17,8 +17,8 @@ devbox run wrk <port>
 ```
 Where `<port>` is the port of the server you want to benchmark.
 - Go server runs on port `1323`
-- Python server runs on port `1324`
-- Node server runs on port `1325`
+- Python server runs on port `1325`
+- Node server runs on port `1324`
 
 
 ## Results
