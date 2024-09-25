@@ -25,12 +25,12 @@ Where `<port>` is the port of the server you want to benchmark.
 ## Results
 This results are obtained by running the benchmarking tool wrk with the following command:
 ```bash
-wrk -t12 -c400 -d30s http://localhost:<port>
+devbox run concurrent <port>
 ```
 Which means that we are using 12 threads, 400 connections and running the test for 30 seconds.
 
-| Server | Total requests | Latency   | Request/s |
-|--------|----------------|-----------|-----------|
-| Go     | 12 401 882     | 1.21 ms   | 34.59     |
-| Python | 104 351        | 116.38 ms | 291.71    |
-| Node   | 592 960        | 27.19 ms  | 1.65k     |
+| **Server** | **Total requests** | **Latency** | **Request/s** |
+|------------|--------------------|-------------|---------------|
+| Go         | 13,861,072          | 1.51 ms     | 461,113.55    |
+| Python     | 55,105              | 221.43 ms   | 156.43        |
+| Node       | 546,475             | 29.87 ms    | 18,194.19     |
