@@ -13,7 +13,8 @@ devbox run js # for node server
 
 If you also want to run the benchmarking you can run the following command:
 ```bash
-devbox run wrk <port>
+devbox run single <port> # no concurrent connections
+devbox run concurrent <port> # concurrent connections
 ```
 Where `<port>` is the port of the server you want to benchmark.
 - Go server runs on port `1323`
